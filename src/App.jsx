@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate, Link } from 'react-router-dom';
-import './styles.css'; // Importujemy wspólny plik CSS
+import './styles.css';
 
 const Home = lazy(() => import('./pages/Home'));
 const Movies = lazy(() => import('./pages/Movies'));
