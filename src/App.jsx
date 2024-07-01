@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate, Link } from 'react-router-dom';
+import './styles.css'; // Importujemy wspólny plik CSS
 
 const Home = lazy(() => import('./pages/Home'));
 const Movies = lazy(() => import('./pages/Movies'));
@@ -9,7 +10,7 @@ const Reviews = lazy(() => import('./components/Reviews'));
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <nav>
         <Link to="/">Home</Link>
         <Link to="/movies">Movies</Link>
