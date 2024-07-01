@@ -17,6 +17,8 @@ function MovieDetails() {
 
   if (!movie) return <div>Loading...</div>;
 
+  const userScore = Math.round(movie.vote_average * 10);
+
   return (
     <div className="movie-details">
       <button onClick={() => navigate(-1)}>← Go back</button>
@@ -24,7 +26,7 @@ function MovieDetails() {
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
         <div>
           <h1>{movie.title} ({movie.release_date.split('-')[0]})</h1>
-          <p>User Score: {movie.vote_average * 10}%</p>
+          <p>User Score: {userScore}%</p>
           <h2>Overview</h2>
           <p>{movie.overview}</p>
           <h3>Genres</h3>
