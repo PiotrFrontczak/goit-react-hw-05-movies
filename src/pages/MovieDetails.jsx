@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Outlet, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 
 const API_KEY = '584470dd898841524f519ab5622a6d35';
 
@@ -41,9 +40,5 @@ function MovieDetails() {
     </div>
   );
 }
-
-MovieDetails.propTypes = {
-  movieId: PropTypes.string.isRequired,
-};
 
 export default MovieDetails;

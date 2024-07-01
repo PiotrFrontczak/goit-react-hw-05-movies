@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 
 const API_KEY = '584470dd898841524f519ab5622a6d35';
 
@@ -26,9 +25,5 @@ function Cast() {
     </div>
   );
 }
-
-Cast.propTypes = {
-  movieId: PropTypes.string.isRequired,
-};
 
 export default Cast;
