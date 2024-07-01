@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const API_KEY = '584470dd898841524f519ab5622a6d35';
 
@@ -24,7 +25,9 @@ function Movies() {
       <button onClick={searchMovies}>Search</button>
       <ul>
         {movies.map(movie => (
-          <li key={movie.id}>{movie.title}</li>
+          <li key={movie.id}>
+            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+          </li>
         ))}
       </ul>
     </div>
